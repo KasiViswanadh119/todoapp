@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+.Page{
+  width: 100%;
+  height: 1024px;
+  top: -388px;
+  left: -720px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Sidepage{
   display: flex;
   flex-direction: column;
+  width: 280px;
+  height:auto;
+  gap: 24px;
+}
+.logo{
+  display: flex;
+  width: 240px;
+  height: 60px;
+  padding: 16px, 24px, 16px, 24px;
+  border-bottom: 1px solid #EBEEFC;
+  gap: 10px;
+} 
+.shape{
+  position: relative;
+  width: 16px;
+  height: 15.4px;
+  top: 18px;
+  left: 20px;
+}
+.text{
+  position: relative;
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  left: 30px;
+}
+
+.SidebarList {
+  height: auto;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.SidebarList .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -30px;
+  list-style-type: none;
+  margin: 3%;
+  height: 40px;
+  padding-left: 0; /* Set padding-left to 0 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SidebarList .row:hover{
+  cursor: pointer;
+  background-color:#EBEEFC;
 }
+.SidebarList .row.active{
+  background-color:#EBEEFC;
+
+}
+
+.projectbutton{
+  position: relative;
+  left: 30px;
+  width: 200px;
+height: 32px;
+padding: 10px, 24px, 10px, 24px;
+border: 1px, 0px, 0px, 0px;
+gap: 10px;
+
+  background: none;
+  border: none;
+  color: #3659E2;
+  border-top: 1px solid #EBEEFC;
+}
+
+
+/*This is for freelacing*/
+
+.content{
+  background-color: white;
+  border-left: 1px solid #3659E229;
+  width: 1200px;
+  height: 1024px;
+  left: 240px;
+  gap: 10px;
+
+}
+
+.header{
+  width: 1200px;
+  height: 60px;
+  padding: 16px, 24px, 16px, 24px;
+  gap: 10px;
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  left: 25px;
+}
+
+.seperation{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.todo{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 1024px;
+  top: 84px;
+  left: 50px;
+  gap: 20px;
+  
+}
+
+.progress{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 1024px;
+  top: 84px;
+  left: 318px;
+  gap: 20px;
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 1024px;
+  top: 84px;
+  left: 612px;
+  gap: 20px;
+}
+
+.completed{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 1024px;
+  top: 84px;
+  left: 906px;
+  gap: 20px;
+}
+
+.todotext {
+  position: relative;
+  left: 15px; /* Adjust this value based on your layout */
+  top: 10px; /* Center the text vertically */
+  transform: translateY(-50%); /* Center the text vertically */
+  background: #EBEEFC;
+  width: 68px;
+  height: 32px;
+  padding: 4px 12px; /* Adjust padding shorthand */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todobutton{
+  background: #EBEEFC;
+  position: relative;
+  left: 15px;
+  top: -25px;
+  width: 230px;
+height: 32px;
+padding: 10px, 8px, 10px, 8px;
+border-radius: 8px;
+gap: 4px;
+
+}
+
+.progresstext {
+  position: relative;
+  left: 15px; /* Adjust this value based on your layout */
+  top: 10px; /* Center the text vertically */
+  transform: translateY(-50%); /* Center the text vertically */
+  background: #FDF2FA;
+  width: 97px;
+  height: 32px;
+  padding: 4px 12px; /* Adjust padding shorthand */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressbutton{
+  background: #FDF2FA;
+  position: relative;
+  left: 15px;
+  top: -25px;
+  width: 230px;
+height: 32px;
+padding: 10px, 8px, 10px, 8px;
+border-radius: 8px;
+gap: 4px;
+
+}
+
+.reviewtext {
+  position: relative;
+  left: 15px; /* Adjust this value based on your layout */
+  top: 10px; /* Center the text vertically */
+  transform: translateY(-50%); /* Center the text vertically */
+  background: #EFF8FF;
+  width: 68px;
+  height: 32px;
+  padding: 4px 12px; /* Adjust padding shorthand */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewbutton{
+  background: #EFF8FF;
+  position: relative;
+  left: 15px;
+  top: -25px;
+  width: 230px;
+height: 32px;
+padding: 10px, 8px, 10px, 8px;
+border-radius: 8px;
+gap: 4px;
+
+}
+
+.completedtext {
+  position: relative;
+  left: 15px; /* Adjust this value based on your layout */
+  top: 10px; /* Center the text vertically */
+  transform: translateY(-50%); /* Center the text vertically */
+  background: #E7F8E9;
+  width: 68px;
+  height: 32px;
+  padding: 4px 12px; /* Adjust padding shorthand */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completedbutton{
+  background: #E7F8E9;
+  position: relative;
+  left: 15px;
+  top: -25px;
+  width: 230px;
+height: 32px;
+padding: 10px, 8px, 10px, 8px;
+border-radius: 8px;
+gap: 4px;
+
+}
+
+/*seperationLines*/
+.seperation::before,
+.seperation::after,
+.seperation .additional-line {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 821px;
+  border-left: 1px solid #D8E0FD;
+}
+
+.seperation::before {
+  top: 136px;
+  left: 600px;
+}
+
+.seperation::after {
+  top: 136px;
+  left: 900px;
+}
+
+.seperation .additional-line {
+  top: 136px;
+  left: 1200px;
+}
+
+
+
+
