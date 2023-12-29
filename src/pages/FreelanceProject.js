@@ -22,6 +22,7 @@ const FreelanceProject = () => {
 
   const handleAddNewClick = () => {
     setFormVisible(true);
+    setEditingTask(null);
     console.log("Add New button clicked!");
   };
 
