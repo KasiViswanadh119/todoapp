@@ -16,7 +16,7 @@ const TaskCard = ({ taskData }) => {
         <p>{name}</p>
       </div>
       <div className="cardContent">
-        <p>Start Date: {startDate}</p>
+        <p className="cardstart">Start Date: {startDate}</p>
         <p>Deadline: {deadline}</p>
       </div>
     </div>

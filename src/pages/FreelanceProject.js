@@ -35,10 +35,10 @@ const FreelanceProject = () => {
           <p className="todotext">To Do</p>
           {submittedTasks.map((task, index) => (
           <div key={index} className="card">
-            <p>{task.name}</p>
+            <p className="cardheader">{task.name}</p>
             <div className="cardContent">
-            <p>Start Date: {task.startDate}</p>
-            <p>Deadline: {task.deadline}</p>
+            <div><p><div className="cardstart">Start Date: </div><div className="cardstartdate">{task.startDate}</div></p></div>
+            <p><div className="cardstart">Deadline: </div><div className="cardstartdate">{task.deadline}</div></p>
             </div>
           </div>
         ))}
