@@ -1,5 +1,5 @@
 // HPCLProject1.js
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import '../App.css';
 import TaskForm from "../components/TaskForm"; 
 
@@ -8,7 +8,16 @@ const HPCLProject1 = () => {
   const [submittedTasks, setSubmittedTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
 
-  
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    setSubmittedTasks(storedTasks);
+  }, []);
+
+  // Save tasks to localStorage whenever tasks change
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(submittedTasks));
+  }, [submittedTasks]);
+
 
   const handleAddNewClick = () => {
     setFormVisible(true);
