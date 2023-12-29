@@ -34,6 +34,7 @@ const FreelanceProject = () => {
         <div className="todo">
           <p className="todotext">To Do</p>
           {submittedTasks.map((task, index) => (
+            task.status === 'To Do' && (
           <div key={index} className="card">
             <p className="cardheader">{task.name}</p>
             <div className="cardContent">
@@ -41,6 +42,7 @@ const FreelanceProject = () => {
             <p><div className="cardstart">Deadline: </div><div className="cardstartdate">{task.deadline}</div></p>
             </div>
           </div>
+            )
         ))}
           <button className="todobutton" onClick={handleAddNewClick}>
             + Add New
@@ -48,15 +50,54 @@ const FreelanceProject = () => {
         </div>
         <div className="progress">
           <p className="progresstext">In progress</p>
-          <button className="progressbutton" onClick={handleAddNewClick}>+ Add New</button>
+          {submittedTasks.map((task, index) => (
+            task.status === 'In Progress' && (
+          <div key={index} className="card">
+            <p className="cardheader">{task.name}</p>
+            <div className="cardContent">
+            <div><p><div className="cardstart">Start Date: </div><div className="cardstartdate">{task.startDate}</div></p></div>
+            <p><div className="cardstart">Deadline: </div><div className="cardstartdate">{task.deadline}</div></p>
+            </div>
+          </div>
+            )
+        ))}
+          <button className="progressbutton" onClick={handleAddNewClick}>
+            + Add New
+            </button>
         </div>
         <div className="review">
           <p className="reviewtext">In Review</p>
-          <button className="reviewbutton" onClick={handleAddNewClick}>+ Add New</button>
+          {submittedTasks.map((task, index) => (
+            task.status === 'In Review' && (
+          <div key={index} className="card">
+            <p className="cardheader">{task.name}</p>
+            <div className="cardContent">
+            <div><p><div className="cardstart">Start Date: </div><div className="cardstartdate">{task.startDate}</div></p></div>
+            <p><div className="cardstart">Deadline: </div><div className="cardstartdate">{task.deadline}</div></p>
+            </div>
+          </div>
+            )
+        ))}
+          <button className="reviewbutton" onClick={handleAddNewClick}>
+            + Add New
+            </button>
         </div>
         <div className="completed">
           <p className="completedtext">Completed</p>
-          <button className="completedbutton" onClick={handleAddNewClick}>+ Add New</button>
+          {submittedTasks.map((task, index) => (
+            task.status === 'Completed' && (
+          <div key={index} className="card">
+            <p className="cardheader">{task.name}</p>
+            <div className="cardContent">
+            <div><p><div className="cardstart">Start Date: </div><div className="cardstartdate">{task.startDate}</div></p></div>
+            <p><div className="cardstart">Deadline: </div><div className="cardstartdate">{task.deadline}</div></p>
+            </div>
+          </div>
+            )
+        ))}
+          <button className="completedbutton" onClick={handleAddNewClick}>
+            + Add New
+            </button>
         </div>
       </div>
 
