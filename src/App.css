@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   background-color: white;
+  
 }
 
 .Page{
@@ -164,6 +165,7 @@ gap: 10px;
 }
 
 .todotext {
+  color: #3659E2;
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
   top: 10px; /* Center the text vertically */
@@ -179,6 +181,14 @@ gap: 10px;
 }
 
 .todobutton{
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #3659E2;
   background: #EBEEFC;
   position: relative;
   left: 15px;
@@ -192,6 +202,7 @@ border: none;
 }
 
 .progresstext {
+  color: #EE46BC;
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
   top: 10px; /* Center the text vertically */
@@ -207,6 +218,14 @@ border: none;
 }
 
 .progressbutton{
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #EE46BC;
   background: #FDF2FA;
   position: relative;
   left: 15px;
@@ -222,6 +241,7 @@ border: none;
 }
 
 .reviewtext {
+  color: #3FA1E3;
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
   top: 10px; /* Center the text vertically */
@@ -237,6 +257,14 @@ border: none;
 }
 
 .reviewbutton{
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #3FA1E3;
   background: #EFF8FF;
   position: relative;
   left: 15px;
@@ -251,6 +279,7 @@ border: none;
 }
 
 .completedtext {
+  color: #12BB23;
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
   top: 10px; /* Center the text vertically */
@@ -266,6 +295,14 @@ border: none;
 }
 
 .completedbutton{
+  font-style: Typography Styles;
+  font-family:'Nunito Sans',sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #12BB23;
   background: #E7F8E9;
   position: relative;
   left: 15px;
@@ -628,6 +665,12 @@ gap: 4px;
 border: none;
 }
 
+.todobutton:hover{
+  cursor: pointer;
+  background: #D8E0FD;
+
+}
+
 .progresstext {
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
@@ -743,5 +786,22 @@ border: none;
 }
 
 
+/*Task Card CSS*/
 
+/* Add this to your TaskForm.css or create a new CSS file for cards */
+.card {
+  width: 220px;
+  height: auto; /* Adjust as needed based on content */
+  padding: 16px;
+  border-radius: 8px;
+  margin: 10px; /* Adjust margin based on your layout */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Adjust background color as needed */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Add some margin between cards */
+}
 
+.cardContent{
+display: flex;
+flex-direction: row;
+}
