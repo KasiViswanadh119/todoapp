@@ -1,14 +1,14 @@
 export const SidebarData=[
     {
         title:"Freelance Project",
-        link:"/freelance-project",
+        link:"/freelanceproject",
     },
     {
         title:"SBI Outsource",
-        link:"/sbi-outsource",
+        link:"/sbioutsource",
     },
     {
         title:"HPCL Project 1",
-        link:"/hpcl-project-1",
+        link:"/hpclproject1",
     }
 ]

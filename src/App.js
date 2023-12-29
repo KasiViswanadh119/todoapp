@@ -5,7 +5,7 @@ import Layout from "./components/layouts/Layout";
 import FreelanceProject from "./pages/FreelanceProject.js";
 import SBIOutsource from "./pages/Sbioutsource.js";
 import HPCLProject1 from "./pages/HpclProject.js";
-import TaskForm from "./components/TaskForm.js"; // Import TaskForm
+import TaskForm from "./components/TaskForm.js"; 
 
 const App = () => {
   const [isFormVisible, setFormVisible] = useState(false);
@@ -40,7 +40,7 @@ const App = () => {
           }
         />
         <Route
-          path="/sbi-outsource"
+          path="/sbioutsource"
           element={
             <Layout>
               <SBIOutsource />
@@ -48,7 +48,7 @@ const App = () => {
           }
         />
         <Route
-          path="/hpcl-project-1"
+          path="/hpclproject1"
           element={
             <Layout>
               <HPCLProject1 />
