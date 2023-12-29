@@ -48,15 +48,15 @@ const FreelanceProject = () => {
         </div>
         <div className="progress">
           <p className="progresstext">In progress</p>
-          <button className="progressbutton">+ Add New</button>
+          <button className="progressbutton" onClick={handleAddNewClick}>+ Add New</button>
         </div>
         <div className="review">
           <p className="reviewtext">In Review</p>
-          <button className="reviewbutton">+ Add New</button>
+          <button className="reviewbutton" onClick={handleAddNewClick}>+ Add New</button>
         </div>
         <div className="completed">
           <p className="completedtext">Completed</p>
-          <button className="completedbutton">+ Add New</button>
+          <button className="completedbutton" onClick={handleAddNewClick}>+ Add New</button>
         </div>
       </div>
 

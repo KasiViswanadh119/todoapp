@@ -114,6 +114,7 @@ gap: 10px;
   text-align: left;
   position: relative;
   left: 25px;
+  border-bottom: 1px solid #EBEEFC;
 }
 
 .seperation{
@@ -644,7 +645,7 @@ border: none;
   transform: translateY(-50%); /* Center the text vertically */
   background: #EBEEFC;
   width: 68px;
-  height: 32px;
+  height: 25px;
   padding: 4px 12px; /* Adjust padding shorthand */
   border-radius: 20px;
   display: flex;
@@ -678,7 +679,7 @@ border: none;
   transform: translateY(-50%); /* Center the text vertically */
   background: #FDF2FA;
   width: 97px;
-  height: 32px;
+  height: 25px;
   padding: 4px 12px; /* Adjust padding shorthand */
   border-radius: 20px;
   display: flex;
@@ -697,10 +698,12 @@ padding: 10px, 8px, 10px, 8px;
 border-radius: 8px;
 gap: 4px;
 border: none;
-
+}
+.progressbutton:hover{
+  cursor: pointer;
+  background: #FCE7F6;
 
 }
-
 .reviewtext {
   position: relative;
   left: 15px; /* Adjust this value based on your layout */
@@ -708,7 +711,7 @@ border: none;
   transform: translateY(-50%); /* Center the text vertically */
   background: #EFF8FF;
   width: 68px;
-  height: 32px;
+  height: 25px;
   padding: 4px 12px; /* Adjust padding shorthand */
   border-radius: 20px;
   display: flex;
@@ -727,7 +730,11 @@ padding: 10px, 8px, 10px, 8px;
 border-radius: 8px;
 gap: 4px;
 border: none;
+}
 
+.reviewbutton:hover{
+  cursor: pointer;
+  background: #D1E9FF;
 }
 
 .completedtext {
@@ -737,7 +744,7 @@ border: none;
   transform: translateY(-50%); /* Center the text vertically */
   background: #E7F8E9;
   width: 68px;
-  height: 32px;
+  height: 25px;
   padding: 4px 12px; /* Adjust padding shorthand */
   border-radius: 20px;
   display: flex;
@@ -756,6 +763,11 @@ padding: 10px, 8px, 10px, 8px;
 border-radius: 8px;
 gap: 4px;
 border: none;
+}
+
+.completedbutton:hover{
+  cursor: pointer;
+  background: #B6EABB;
 
 }
 
