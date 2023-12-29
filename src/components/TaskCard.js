@@ -1,23 +1,21 @@
 // TaskCard.js
-import React from 'react';
-import "../App.css";
-const TaskCard = ({ taskData }) => {
-  // Check if taskData is defined
-  if (!taskData) {
-    return null; // or return a default component if taskData is undefined
-  }
+import React from "react";
 
-  // Destructure properties from taskData
-  const { name, startDate, deadline, } = taskData;
-
+const TaskCard = ({ task, onCardClick }) => {
   return (
-    <div className="taskCard">
-      <div className="cardHeader">
-        <p>{name}</p>
-      </div>
+    <div className="card" onClick={() => onCardClick(task)}>
+      <p className="cardheader">{task.name}</p>
       <div className="cardContent">
-        <p className="cardstart">Start Date: {startDate}</p>
-        <p>Deadline: {deadline}</p>
+        <div>
+          <p>
+            <div className="cardstart">Start Date: </div>
+            <div className="cardstartdate">{task.startDate}</div>
+          </p>
+        </div>
+        <p>
+          <div className="cardstart">Deadline: </div>
+          <div className="cardstartdate">{task.deadline}</div>
+        </p>
       </div>
     </div>
   );
