@@ -1,6 +1,6 @@
 // SBIOutsource.js
 import React,{useState,useEffect} from "react";
-import './Sbioutsource.css';
+import '../App.css';
 import TaskForm from "../components/TaskForm"; 
 const SBIOutsource = () => {
   const [isFormVisible, setFormVisible] = useState(false);
