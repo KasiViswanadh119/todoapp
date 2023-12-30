@@ -7,17 +7,18 @@ const HPCLProject1 = () => {
   const [isFormVisible, setFormVisible] = useState(false);
   const [submittedTasks, setSubmittedTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
-  const storageKey = "tasks_HPCLProject1";
 
+  
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     setSubmittedTasks(storedTasks);
   }, []);
-  
-  // Save tasks to localStorage with the unique key
+
+  // Save tasks to localStorage whenever tasks change
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(submittedTasks));
+    localStorage.setItem("tasks", JSON.stringify(submittedTasks));
   }, [submittedTasks]);
+
 
   const handleAddNewClick = () => {
     setFormVisible(true);

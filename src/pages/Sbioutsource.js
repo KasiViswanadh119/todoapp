@@ -6,17 +6,16 @@ const SBIOutsource = () => {
   const [isFormVisible, setFormVisible] = useState(false);
   const [submittedTasks, setSubmittedTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
-
-  const storageKey = "tasks_SBIOutsource";
+  
 
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     setSubmittedTasks(storedTasks);
   }, []);
 
   // Save tasks to localStorage whenever tasks change
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(submittedTasks));
+    localStorage.setItem("tasks", JSON.stringify(submittedTasks));
   }, [submittedTasks]);
 
 
