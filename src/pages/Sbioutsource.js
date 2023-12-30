@@ -1,7 +1,7 @@
 // SBIOutsource.js
 import React,{useState,useEffect} from "react";
 import '../App.css';
-import TaskForm from "../components/TaskForm"; 
+import TaskEditForm from "../components/TaskEditForm";
 const SBIOutsource = () => {
   const [isFormVisible, setFormVisible] = useState(false);
   const [submittedTasks, setSubmittedTasks] = useState([]);
@@ -92,7 +92,7 @@ const SBIOutsource = () => {
             </div>
         </div>
         {isFormVisible && (
-        <TaskForm
+        <TaskEditForm
           onSubmit={handleFormSubmit}
           onCancel={handleFormCancel}
           initialData={editingTask}

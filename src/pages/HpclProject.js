@@ -1,7 +1,7 @@
 // HPCLProject1.js
 import React,{useState,useEffect} from "react";
 import '../App.css';
-import TaskForm from "../components/TaskForm"; 
+import TaskEditForm from "../components/TaskEditForm";
 
 const HPCLProject1 = () => {
   const [isFormVisible, setFormVisible] = useState(false);
@@ -93,7 +93,7 @@ const HPCLProject1 = () => {
             </div>
         </div>
         {isFormVisible && (
-        <TaskForm
+        <TaskEditForm
           onSubmit={handleFormSubmit}
           onCancel={handleFormCancel}
           initialData={editingTask}

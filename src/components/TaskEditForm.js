@@ -1,8 +1,7 @@
-// TaskForm.js
 import React from 'react';
 import './TaskForm.css';
 
-const TaskEditForm = ({ onSubmit, onCancel }) => {
+const TaskEditForm = ({ onSubmit, onCancel, initialData }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
@@ -12,7 +11,6 @@ const TaskEditForm = ({ onSubmit, onCancel }) => {
       status: event.target.status.value,
     };
 
-    console.log('Form Data:', formData);
     onSubmit(formData);
   };
 
@@ -22,57 +20,80 @@ const TaskEditForm = ({ onSubmit, onCancel }) => {
 
   return (
     <div className="TaskFormOverlay">
-      <div className="TaskFormContainer" >
+      <div className="TaskFormContainer">
         <form onSubmit={handleSubmit}>
-        <div>
-            <div className='formheader'>
-                <p className='formheadertext'>Edit Task</p>
-            </div>
-        <div className='formcenter'>
+          <div className='formheader'>
+            <p className='formheadertext'>{initialData ? 'Edit Task' : 'Add New Task'}</p>
+          </div>
+          <div className='formcenter'>
             <div className='formcentername'>
-                <label htmlFor="name">Name of the Task:</label>
-            <div className='formcenternamebox' >
-                <input type="text" id="name" name="name" required placeholder='Text'/>
-            </div>
+              <label htmlFor="name">Name of the Task:</label>
+              <div className='formcenternamebox' >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder='Text'
+                  defaultValue={initialData ? initialData.name : ''}
+                />
+              </div>
             </div>
             <div className='formcenterdates'>
-                <div className='startdate'>
-                    <div>
-                    <label htmlFor="startDate">Start Date:</label>
-                    </div>
-                    <div className='date'>
-                    <input type="date" id="startDate" name="startDate" required />
-                    </div>
+              <div className='startdate'>
+                <div>
+                  <label htmlFor="startDate">Start Date:</label>
                 </div>
-                <div className='deadline'>
-                    <div>
-                    <label htmlFor="deadline">Deadline:</label>
-                    </div>
-                    <div className='dead'>
-                    <input type="date" id="deadline" name="deadline" required />
-                    </div>
+                <div className='date'>
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    required
+                    defaultValue={initialData ? initialData.startDate : ''}
+                  />
                 </div>
-          </div>
-          <div className='formcenterstatus'>
-            <div>
-                <label htmlFor="status">Status:</label>
+              </div>
+              <div className='deadline'>
+                <div>
+                  <label htmlFor="deadline">Deadline:</label>
+                </div>
+                <div className='dead'>
+                  <input
+                    type="date"
+                    id="deadline"
+                    name="deadline"
+                    required
+                    defaultValue={initialData ? initialData.deadline : ''}
+                  />
+                </div>
+              </div>
             </div>
-            <select id="status" name="status" required>
+            <div className='formcenterstatus'>
+              <div>
+                <label htmlFor="status">Status:</label>
+              </div>
+              <select
+                id="status"
+                name="status"
+                required
+                defaultValue={initialData ? initialData.status : 'To Do'}
+              >
                 <option value="To Do">To Do</option>
                 <option value="In Progress">In Progress</option>
                 <option value="In Review">In Review</option>
                 <option value="Completed">Completed</option>
-            </select>
+              </select>
+            </div>
           </div>
-        </div>
           <div className='formfooter'>
-            
-            <button  className='cancel' type="button" onClick={handleCancel}>
-                Cancel
+            <button className='cancel' type="button" onClick={handleCancel}>
+              Cancel
             </button>
-            <button className='submit' type="submit">Save</button>
+            <button className='submit' type="submit">
+              {initialData ? 'Save' : 'Add'}
+            </button>
           </div>
-        </div>
         </form>
       </div>
     </div>
