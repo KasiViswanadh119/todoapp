@@ -6,7 +6,6 @@ const SBIOutsource = () => {
   const [isFormVisible, setFormVisible] = useState(false);
   const [submittedTasks, setSubmittedTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
-  
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
