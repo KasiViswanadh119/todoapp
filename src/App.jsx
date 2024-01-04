@@ -1,10 +1,10 @@
 // App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Layout from "./components/layouts/Layout";
-import FreelanceProject from "./pages/FreelanceProject.js";
-import SBIOutsource from "./pages/Sbioutsource.js";
-import HPCLProject1 from "./pages/HpclProject.js";
+import Layout from "./components/layouts/Layout.js";
+import FreelanceProject from "./pages/FreelanceProject.jsx";
+import SBIOutsource from "./pages/Sbioutsource.jsx";
+import HPCLProject1 from "./pages/HpclProject.jsx";
 import TaskForm from "./components/TaskForm.js"; 
 
 const App = () => {

@@ -621,6 +621,8 @@ border: none;
 .review{
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #D8E0FD;
+  line-height: 500px;
   width: 270px;
   height: 1024px;
   top: 84px;
