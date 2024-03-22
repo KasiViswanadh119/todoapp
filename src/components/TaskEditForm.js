@@ -72,6 +72,7 @@ const TaskEditForm = ({ onSubmit, onCancel, initialData }) => {
             <div className='formcenterstatus'>
               <div>
                 <label htmlFor="status">Status:</label>
+                <span></span>
               </div>
               <select
                 id="status"
