@@ -67,6 +67,7 @@ const TaskEditForm = ({ onSubmit, onCancel, initialData }) => {
                     defaultValue={initialData ? initialData.deadline : ''}
                   />
                 </div>
+                <span></span>
               </div>
             </div>
             <div className='formcenterstatus'>
